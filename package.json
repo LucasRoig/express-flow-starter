@@ -1,0 +1,32 @@
+{
+  "name": "expres-flow-stack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel src/ -d dist/",
+    "build": "npm run flow && npm run babel",
+    "flow": "node ./scripts/flow",
+    "start": "npm run build && node dist/app.js",
+    "dev": "nodemon --watch src/ --exec npm run start"
+  },
+  "keywords": [],
+  "author": "Lucas Roig",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.80.0",
+    "flow-typed": "^2.5.1",
+    "nodemon": "^1.18.4"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  }
+}
